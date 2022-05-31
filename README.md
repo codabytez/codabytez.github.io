@@ -3,7 +3,6 @@
 - 🌱 I’m currently learning javascript
 - 💞️ I’m looking to collaborate on frontend development
 - 📫 How to reach me Twitter: @chizzi01 Instagram: @chizzi01
-- instagram.com/
 
 <!---
 chizzi001/chizzi001 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
