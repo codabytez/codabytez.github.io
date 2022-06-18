@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Layout Task</title>
     <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
-    <link rel="import" href="grid.html">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
 
@@ -28,7 +27,7 @@
             justify-content: center;
             width: 1300px;
             height: 600px;
-            /* margin: 70px 50px; */
+            border-radius: 10px;
             margin: auto;
         }
 
@@ -36,6 +35,8 @@
             background-repeat: no-repeat;
             background-color: hsl(31, 77%, 52%);
             flex: 50%;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
         }
 
         .flex-2 {
@@ -48,6 +49,8 @@
             background-repeat: no-repeat;
             background-color: hsl(179, 100%, 13%);
             flex: 50%;
+            border-bottom-right-radius: 20px;
+            border-top-right-radius: 20px;
         }
 
         h2 {
@@ -99,7 +102,7 @@
             /* color: inherit; */
         }
 
-        a {
+        .link {
             text-decoration: none;
             color: hsl(0, 0%, 100%, 0.75);
             color: inherit;
@@ -107,7 +110,7 @@
             margin: 0%
         }
 
-        a:hover {
+        .link:hover {
             color: hsla(0, 0%, 100%, 0.75);
         }
 
@@ -125,6 +128,9 @@
 </head>
 
 <body>
+    <header>
+        <a href="grid.html" class="grid">Grid</a>
+    </header>
     <div class="flex">
         <div class="flex-1">
             <div class="sedans">
@@ -136,7 +142,7 @@
                     on
                     your next road trip
                 </p>
-                <button><a href="" class="sedans-link">Learn More</a></button>
+                <button><a href="" class="sedans-link link">Learn More</a></button>
             </div>
         </div>
         <div class="flex-2">
@@ -149,7 +155,7 @@
                     vacation
                     and off-road adventures.
                 </p>
-                <button><a href="" class="suvs-link">Learn More</a></button>
+                <button><a href="" class="suvs-link link">Learn More</a></button>
             </div>
         </div>
         <div class="flex-3">
@@ -162,7 +168,7 @@
                     rental
                     and arrive in <style></style>
                 </p>
-                <button><a href="" class="luxury-link">Learn More</a></button>
+                <button><a href="" class="luxury-link link">Learn More</a></button>
             </div>
         </div>
     </div>
