@@ -5,7 +5,7 @@
 }
 
 body {
-    /* background-image: url(images/bg-intro-desktop.png); */
+    background-image: url(./images/bg-intro-desktop.png);
 }
 
 
@@ -137,8 +137,8 @@ a {
 
 @media only screen and (max-width: 767px) {
     body {
-        /* background-image: url(images/bg-intro-mobile.png); */
-        background-image: url(github.com/chizzi001/chizzi001.github.io/blob/main/Registration-Form/images/bg-intro-mobile.png);
+        background-image: url(./images/bg-intro-mobile.png);
+
     }
 
     .section {
