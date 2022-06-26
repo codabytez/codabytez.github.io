@@ -23,6 +23,27 @@ body {
     /* border: 5px solid; */
 }
 
+.head1 {
+    display: grid;
+    grid-template-columns: 90% 100%;
+    height: max-content;
+}
+
+
+.head3 {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.grid1 {
+    grid-row: 2 /3;
+
+}
+
+.grid2 {
+    grid-row: 2 /3;
+}
+
 .grid {
     display: grid;
     grid-template-columns: 50% 40%;
@@ -31,9 +52,6 @@ body {
 
 .content {
     margin: auto;
-    /* font-family: 'Poppins', sans-serif; */
-    /* font-family: 'Open Sans', sans-serif; */
-    /* border: 10px solid red; */
 }
 
 .text,
@@ -280,6 +298,16 @@ a:hover {
 
     .btn1 {
         width: 60%;
+    }
+
+    .head1 {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .head3 {
+        text-align: right;
+        margin-top: 30px;
     }
 
 
