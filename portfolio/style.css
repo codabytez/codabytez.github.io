@@ -1,0 +1,768 @@
+:root {
+    --header1: 'Roboto Slab', serif;
+    --header2: 'Ubuntu', sans-serif;
+    --paragraph1: 'Inconsolata', monospace;
+    --paragraph2: 'Merriweather', serif;
+    --special1: 'Tangerine', cursive;
+    --special2: 'Lobster', cursive;
+}
+
+
+/* <div class="home-hero__mouse-scroll-cont">
+        <div class="mouse"></div>
+      </div>
+      .home-hero__mouse-scroll-cont position: absolute;
+      bottom: 3%;
+      left: 50%;
+      transform: translateX(-50%);
+
+      .mouse width: 25px;
+      height: 40px;
+      border: 2px solid #333;
+      border-radius: 60px;
+      position: relative;
+      overflow: hidden;
+
+      .mouse::before content: '';
+      width: 5px;
+      height: 5px;
+      position: absolute;
+      top: 7px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #333;
+      border-radius: 50%;
+      opacity: 1;
+      animation: wheel 1.3s infinite;
+      -webkit-animation: wheel 1.3s infinite;
+ */
+html {
+    scroll-behavior: smooth;
+
+}
+
+body {
+    background-color: #e9e6e6;
+    /* border: 2px solid #000; */
+    box-sizing: border-box;
+    font-family: var(--paragraph1);
+    font-weight: 500;
+    max-width: 120rem;
+    text-align: center;
+    /* display: inline-block; */
+    margin: auto;
+}
+
+
+/* Nav Bar Styling */
+
+.nav-bar {
+    /* position: absolute; */
+    display: flex;
+    /* width: 100vw; */
+    height: 5rem;
+    position: sticky;
+    top: 0;
+    background-color: #f7f4f4;
+    border-bottom: 2px solid inherit;
+    z-index: 10;
+    box-shadow: 2px 1px 10px #9c9c9c;
+}
+
+
+.profile {
+    flex-basis: 60%;
+    display: flex;
+}
+
+.profile img {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    border: 1px solid #fdfbfb;
+    border-radius: 50%;
+    align-self: center;
+
+}
+
+.profile p {
+    align-self: center;
+    margin: 10px 40px;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-family: var(--paragraph2);
+}
+
+.link {
+    flex-basis: 40%;
+    display: flex;
+    margin: 10px 40px;
+    padding: 10px;
+}
+
+.link a {
+    padding: 10px;
+    flex-basis: 50%;
+    align-self: center;
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: var(--header2);
+
+}
+
+.link a:hover {
+    color: #b3afaf;
+}
+
+
+/* Nav bar Styling Ends  */
+
+
+section,
+footer {
+    /* height: 100px; */
+    /* margin: 10px; */
+    /* border: 2px solid #0000ff; */
+    /* background-color: #0000ff; */
+    /* display: flex; */
+}
+
+/* Home Page Styling */
+
+.home {
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.home::before {
+    content: "";
+    background-image: url(images/christopher-gower.jpg), linear-gradient(45deg, #000000, #2b2b2b);
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-origin: border-box;
+    position: absolute;
+    max-width: 200rem;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.3;
+}
+
+.home-Page {
+    width: 100%;
+    position: relative;
+    /* line-height: 1; */
+    margin: 7rem 2rem 13rem 2rem;
+    /* border: 2px solid grey; */
+    text-align: center;
+    z-index: 1;
+}
+
+.home-Page h2 {
+    color: #000;
+    font-size: 3.5rem;
+    font-family: var(--header2);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.home-Page p {
+    /* border: 2px solid gray; */
+    font-size: 2rem;
+    color: #000;
+    padding: 2rem;
+    font-family: cursive;
+    text-align: center;
+    /* background-color: #00aeff4f; */
+}
+
+.proj-btn {
+    /* margin-left: 100px; */
+    text-align: center;
+    box-sizing: border-box;
+    height: 60px;
+    background-color: #a5960b;
+    border: 1px solid #a5960b;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    margin: auto;
+}
+
+.proj-btn:hover {
+    box-shadow: 2px 1px 5px #444;
+    transition: box-shadow 0.15s;
+}
+
+.proj-btn a {
+    padding: 10px 3rem;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-family: var(--special2);
+}
+
+.home-hero__mouse-scroll-cont {
+    position: absolute;
+    bottom: -40%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.mouse {
+    width: 25px;
+    height: 40px;
+    border: 2px solid #333;
+    border-radius: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.mouse::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    top: 7px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    border-radius: 50%;
+    opacity: 1;
+    animation: wheel 1.3s infinite;
+    -webkit-animation: wheel 1.3s infinite;
+}
+
+@keyframes wheel {
+    to {
+        opacity: 0;
+        top: 27px
+    }
+}
+
+@-webkit-keyframes wheel {
+    to {
+        opacity: 0;
+        top: 27px
+    }
+}
+
+/* Home Page Styling Ends!!! */
+
+
+/* Styling of The About Page and Skills Page
+
+About Me */
+
+.about {
+    /* margin: 10px; */
+    /* border: 2px solid #0000ff; */
+    padding: 4.6rem;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: center;
+    position: relative;
+}
+
+.about::before {
+    content: "";
+    background-image: url(images/nate-grant.jpg), linear-gradient(15deg, #00000057, #000000ad);
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-origin: border-box;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.6;
+}
+
+.me {
+    flex-basis: 100%;
+    padding: 2rem 4rem;
+    /* border: 5px solid #fff; */
+    text-align: center;
+    z-index: 1;
+}
+
+.me>h2 {
+    /* border: 2px solid grey; */
+    font-family: var(--header1);
+    text-transform: uppercase;
+    font-size: 2.2rem;
+}
+
+.me>p {
+    font-family: var(--paragraph2);
+    font-weight: 100;
+    font-style: normal;
+    font-size: 1.5rem;
+}
+
+.about-Me {
+    flex-basis: 42.38%;
+    /* flex-wrap: nowrap; */
+    flex-grow: 1;
+    /* border: 5px solid #fff; */
+    padding: 10px 15px;
+    text-align: justify;
+    box-sizing: border-box;
+    margin: 20px 30px;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.about-Me h2 {
+    font-size: 2.5em;
+    padding: 10px;
+    margin: 5px;
+    text-align: initial;
+    font-family: var(--header2);
+    text-transform: uppercase;
+}
+
+.about-Me p {
+    padding: 5px;
+    font-family: cursive;
+}
+
+.btn {
+    height: 50px;
+    background-color: #c6c6c6;
+    border: 1px solid #c6c6c6;
+    border-radius: 10px;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.btn a {
+    padding: 20px 30px;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: var(--special2);
+    font-weight: 400;
+}
+
+.btn:hover {
+    border: 1px solid #c6c6c6;
+    box-shadow: 0px 5px 7px 5px #000;
+    /* margin: 18px 5px; */
+    padding: 12px 7px;
+    transition: padding 0.1s;
+
+}
+
+/* Skills */
+
+.skill {
+    flex-basis: 44%;
+    flex-grow: 1;
+    /* border: 5px solid #fff; */
+    border-radius: 10px;
+    margin: 20px 30px;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    z-index: 1;
+
+}
+
+.my-Skills h2 {
+    font-size: 2.5em;
+    padding: 10px;
+    margin: 5px;
+    font-family: var(--header2);
+    text-transform: uppercase;
+}
+
+
+
+.weapon {
+    font-size: 1.6rem;
+    padding: 1rem;
+
+}
+
+.items {
+    background-color: #b3afaf;
+    color: #000;
+    border: 2px solid #b3afaf;
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 14px #cccbcb;
+    opacity: 0.7;
+    font-family: cursive;
+
+
+}
+
+.items:hover {
+    color: #eee;
+    background-color: #555;
+    transition: all 0.2s;
+    cursor: no-drop;
+    border: 2px solid #555;
+    user-select: none;
+}
+
+/* Styling of About and Skills ends!!! */
+
+
+
+/* Project Page Styling */
+
+
+
+.project {
+    /* margin: 10px; */
+    /* border: 2px solid #0000ff; */
+    padding: 4.6rem;
+    position: relative;
+    /* background-color: #0000ff; */
+}
+
+.project::before {
+    content: "";
+    background-image: url(images/brandi-redd.jpg), linear-gradient(15deg, #00000057, #000000ad);
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-origin: border-box;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.8;
+}
+
+
+.proj {
+    /* border: 3px solid #ff0000; */
+    box-sizing: border-box;
+    display: grid;
+    /* grid-gap: 5rem; */
+    column-gap: 4rem;
+    grid-template-columns: 1.3fr 1.5fr;
+    box-sizing: border-box;
+    position: relative;
+    /* border: 0.2rem solid #00ffff; */
+    overflow: hidden;
+    margin: 1rem 0.3rem 10rem 0.3rem;
+    padding: 1rem;
+    justify-items: center;
+    align-items: center;
+}
+
+img {
+    width: 100%;
+    border-radius: 1rem;
+    position: relative;
+    z-index: 1;
+    opacity: 0.8;
+    /* width: 30px; */
+}
+
+
+.abt {
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    /* margin: 20px 10px; */
+}
+
+.abt h2 {
+    /* border: 2px solid grey; */
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-family: var(--header1);
+}
+
+.abt p {
+    font-size: 2rem;
+    font-family: var(--special2);
+    font-weight: 100;
+
+}
+
+.proj-button {
+    background-color: #0000ff;
+    margin: auto;
+
+}
+
+/* Project Page Styling Ends Here!!! */
+
+
+/* Contact Page Styling */
+
+.contact {
+    /* margin: 10px; */
+    /* border: 2px solid #0000ff; */
+    padding: 4.6rem;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: center;
+    position: relative;
+}
+
+.contact::before {
+    content: "";
+    background-image: url(images/jess-bailey.jpg), linear-gradient(15deg, #00000057, #000000ad);
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-origin: border-box;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.6;
+}
+
+.contact_me {
+    /* text-align: justify; */
+    flex-basis: 100%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    /* padding: 0.5rem 0.1rem 0.5rem 6.5rem; */
+    /* font-family: 'Courier New', Courier, monospace; */
+}
+
+.contact_me h2 {
+    font-size: 2.5rem;
+    width: 100%;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.contact_me p {
+    /* border: 5px solid #e4e675; */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    /* padding: 0.1rem 4rem; */
+    padding: 0.1rem;
+    /* width: 66%; */
+    font-weight: normal;
+    margin: auto;
+    text-align: center;
+}
+
+.contact_me>p>a {
+    /* text-decoration: none; */
+    color: #fff;
+    font-weight: 900;
+    text-decoration: dotted;
+}
+
+.contact_me>p>a:hover {
+    color: #0000ff;
+    text-decoration: solid;
+}
+
+.contact_me>p>a:active {
+    color: #ff0000;
+}
+
+
+
+/* Stlying of Form */
+
+.contact_form {
+    /* flex-basis: 100%; */
+    width: 50%;
+    margin: 1rem;
+    z-index: 2;
+    background-color: #ffffffad;
+    border-radius: 1rem;
+    /* border: 2px solid green; */
+}
+
+.form {
+    margin: 1rem 3.5rem;
+    width: 100%;
+    /* border: 2px solid blue; */
+}
+
+/* Input Styling */
+
+.form input,
+textarea,
+button {
+    display: block;
+    margin: 1.5rem;
+    border-radius: 5px;
+    border: 1px solid #c3c3c3;
+    background-color: inherit;
+}
+
+.form input,
+textarea {
+    border: 2px;
+    border-style: groove;
+    box-sizing: border-box;
+}
+
+.form>input {
+    height: 4rem;
+    width: 70%;
+    padding: 1rem 3rem;
+}
+
+.form>textarea {
+    width: 70%;
+    resize: none;
+    padding: 3rem;
+    overflow: hidden;
+    text-align: justify;
+}
+
+.form input:hover,
+textarea:hover {
+    border: 2px outset;
+}
+
+.form input:active,
+textarea:active {
+    background-color: #ddd;
+}
+
+.form input:focus,
+textarea:focus {
+    border: 2px inset;
+    outline-style: none;
+
+}
+
+
+
+/* Submit Button Styling */
+
+.form>button {
+    height: 50px;
+    width: 180px;
+    background-color: #000;
+    color: #fff;
+    margin: 3rem;
+}
+
+.form>button:hover {
+    cursor: pointer;
+    background-color: #ddd;
+    border: 1px solid #ddd;
+    color: #000;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+
+/* Contact Page Styling Ends!!! */
+
+
+
+/* Footer Styling */
+
+footer {
+    /* margin: 10px; */
+    /* border: 2px solid #0000ff; */
+    z-index: 2;
+    background-color: #000;
+    color: #fff;
+}
+
+.main-footer-upper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    /* border: 2px solid #0000ff; */
+}
+
+
+.main-footer-row1 {
+    flex-basis: 30%;
+    line-height: 1.5;
+    padding: 10px;
+    /* flex-basis: 30px; */
+    /* border: 2px solid #0000ff; */
+    /* width: 30%; */
+    order: 2;
+    /* display: flex; */
+    /* flex-direction: column; */
+}
+
+.social-icon {
+    /* width: 10rem; */
+    display: flex;
+}
+
+.main-footer-row2 {
+    /* padding-top: 1.5rem; */
+    width: 40%;
+    order: 1;
+}
+
+/*  */
+
+.main-container {
+    /* box-sizing: border-box; */
+    max-width: 120rem;
+    margin: auto;
+    width: 90%;
+}
+
+.social-icon {
+    /* border: 2px solid grey; */
+}
+
+.social-icon h2 {
+    font-size: 2rem;
+    width: 10%;
+    box-sizing: border-box;
+}
+
+.social-icon>a>img {
+    background-color: #fff;
+    width: 2.5rem;
+    /* height: 2rem; */
+    margin: 0.3rem;
+    box-sizing: border-box;
+}
+
+.social-icon a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+.main-footer-lower {
+    background-color: #000;
+    text-align: center;
+    /* width: 100%; */
+    padding: 3rem;
+    border-top: 0.1rem solid #eee;
+}
+
+/* Footer Styling Ends!!! */
+
+
+/* Ends Here For now!!! */
