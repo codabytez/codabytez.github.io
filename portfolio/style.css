@@ -1,56 +1,31 @@
 :root {
     --header1: 'Roboto Slab', serif;
-    --header2: 'Ubuntu', sans-serif;
-    --paragraph1: 'Inconsolata', monospace;
-    --paragraph2: 'Merriweather', serif;
-    --special1: 'Tangerine', cursive;
-    --special2: 'Lobster', cursive;
 }
 
+/* FIXME: fix the fonts. Search for "cool google fonts". */
 
-/* <div class="home-hero__mouse-scroll-cont">
-        <div class="mouse"></div>
-      </div>
-      .home-hero__mouse-scroll-cont position: absolute;
-      bottom: 3%;
-      left: 50%;
-      transform: translateX(-50%);
-
-      .mouse width: 25px;
-      height: 40px;
-      border: 2px solid #333;
-      border-radius: 60px;
-      position: relative;
-      overflow: hidden;
-
-      .mouse::before content: '';
-      width: 5px;
-      height: 5px;
-      position: absolute;
-      top: 7px;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: #333;
-      border-radius: 50%;
-      opacity: 1;
-      animation: wheel 1.3s infinite;
-      -webkit-animation: wheel 1.3s infinite;
- */
 html {
     scroll-behavior: smooth;
 
 }
 
 body {
-    background-color: #e9e6e6;
+    background-color: #333;
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-origin: border-box;
+    position: relative;
     /* border: 2px solid #000; */
     box-sizing: border-box;
-    font-family: var(--paragraph1);
     font-weight: 500;
     max-width: 120rem;
     text-align: center;
     /* display: inline-block; */
     margin: auto;
+}
+
+.body-demo {
+    background-image: url(images/henry-co.jpg);
 }
 
 
@@ -90,7 +65,6 @@ body {
     margin: 10px 40px;
     text-transform: uppercase;
     font-weight: 900;
-    font-family: var(--paragraph2);
 }
 
 .link {
@@ -109,7 +83,6 @@ body {
     font-size: 18px;
     font-weight: 700;
     text-transform: uppercase;
-    font-family: var(--header2);
 
 }
 
@@ -121,15 +94,6 @@ body {
 /* Nav bar Styling Ends  */
 
 
-section,
-footer {
-    /* height: 100px; */
-    /* margin: 10px; */
-    /* border: 2px solid #0000ff; */
-    /* background-color: #0000ff; */
-    /* display: flex; */
-}
-
 /* Home Page Styling */
 
 .home {
@@ -140,22 +104,8 @@ footer {
     /* justify-content: center; */
 }
 
-.home::before {
-    content: "";
-    background-image: url(images/christopher-gower.jpg), linear-gradient(45deg, #000000, #2b2b2b);
-    background-blend-mode: overlay;
-    background-size: cover;
-    background-origin: border-box;
-    position: absolute;
-    max-width: 200rem;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    opacity: 0.3;
-}
 
-.home-Page {
+.homePage {
     width: 100%;
     position: relative;
     /* line-height: 1; */
@@ -165,20 +115,18 @@ footer {
     z-index: 1;
 }
 
-.home-Page h2 {
+.homePage h2 {
     color: #000;
     font-size: 3.5rem;
-    font-family: var(--header2);
     text-transform: uppercase;
     text-align: center;
 }
 
-.home-Page p {
+.homePage p {
     /* border: 2px solid gray; */
     font-size: 2rem;
     color: #000;
     padding: 2rem;
-    font-family: cursive;
     text-align: center;
     /* background-color: #00aeff4f; */
 }
@@ -206,7 +154,6 @@ footer {
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 800;
-    font-family: var(--special2);
 }
 
 .home-hero__mouse-scroll-cont {
@@ -262,8 +209,6 @@ footer {
 About Me */
 
 .about {
-    /* margin: 10px; */
-    /* border: 2px solid #0000ff; */
     padding: 4.6rem;
     background-color: #000;
     color: #fff;
@@ -274,19 +219,6 @@ About Me */
     position: relative;
 }
 
-.about::before {
-    content: "";
-    background-image: url(images/nate-grant.jpg), linear-gradient(15deg, #00000057, #000000ad);
-    background-blend-mode: overlay;
-    background-size: cover;
-    background-origin: border-box;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    opacity: 0.6;
-}
 
 .me {
     flex-basis: 100%;
@@ -298,13 +230,11 @@ About Me */
 
 .me>h2 {
     /* border: 2px solid grey; */
-    font-family: var(--header1);
     text-transform: uppercase;
     font-size: 2.2rem;
 }
 
 .me>p {
-    font-family: var(--paragraph2);
     font-weight: 100;
     font-style: normal;
     font-size: 1.5rem;
@@ -328,13 +258,11 @@ About Me */
     padding: 10px;
     margin: 5px;
     text-align: initial;
-    font-family: var(--header2);
     text-transform: uppercase;
 }
 
 .about-Me p {
     padding: 5px;
-    font-family: cursive;
 }
 
 .btn {
@@ -352,7 +280,6 @@ About Me */
     color: #000;
     text-decoration: none;
     text-transform: uppercase;
-    font-family: var(--special2);
     font-weight: 400;
 }
 
@@ -383,7 +310,6 @@ About Me */
     font-size: 2.5em;
     padding: 10px;
     margin: 5px;
-    font-family: var(--header2);
     text-transform: uppercase;
 }
 
@@ -405,7 +331,6 @@ About Me */
     border-radius: 10px;
     box-shadow: 0px 0px 14px #cccbcb;
     opacity: 0.7;
-    font-family: cursive;
 
 
 }
@@ -435,19 +360,7 @@ About Me */
     /* background-color: #0000ff; */
 }
 
-.project::before {
-    content: "";
-    background-image: url(images/brandi-redd.jpg), linear-gradient(15deg, #00000057, #000000ad);
-    background-blend-mode: overlay;
-    background-size: cover;
-    background-origin: border-box;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    opacity: 0.8;
-}
+/* FIXME: remove the background image. */
 
 
 .proj {
@@ -489,12 +402,10 @@ img {
     /* border: 2px solid grey; */
     font-size: 3rem;
     text-transform: uppercase;
-    font-family: var(--header1);
 }
 
 .abt p {
     font-size: 2rem;
-    font-family: var(--special2);
     font-weight: 100;
 
 }
@@ -510,6 +421,8 @@ img {
 
 /* Contact Page Styling */
 
+/* TODO: search for contact form design inspiration on dribble or fine nice contact form on codepen */
+
 .contact {
     /* margin: 10px; */
     /* border: 2px solid #0000ff; */
@@ -523,19 +436,6 @@ img {
     position: relative;
 }
 
-.contact::before {
-    content: "";
-    background-image: url(images/jess-bailey.jpg), linear-gradient(15deg, #00000057, #000000ad);
-    background-blend-mode: overlay;
-    background-size: cover;
-    background-origin: border-box;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    opacity: 0.6;
-}
 
 .contact_me {
     /* text-align: justify; */
@@ -543,7 +443,6 @@ img {
     margin-left: 1rem;
     margin-right: 1rem;
     /* padding: 0.5rem 0.1rem 0.5rem 6.5rem; */
-    /* font-family: 'Courier New', Courier, monospace; */
 }
 
 .contact_me h2 {
@@ -556,7 +455,6 @@ img {
 
 .contact_me p {
     /* border: 5px solid #e4e675; */
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
     /* padding: 0.1rem 4rem; */
     padding: 0.1rem;
@@ -714,10 +612,17 @@ footer {
     display: flex;
 }
 
+ion-icon {
+    font-size: 32px;
+}
+
+/* FIXME: align the text to the left for desktop and align to center for mobile */
+
 .main-footer-row2 {
     /* padding-top: 1.5rem; */
     width: 40%;
     order: 1;
+    text-align: start;
 }
 
 /*  */
@@ -729,9 +634,6 @@ footer {
     width: 90%;
 }
 
-.social-icon {
-    /* border: 2px solid grey; */
-}
 
 .social-icon h2 {
     font-size: 2rem;
@@ -766,3 +668,137 @@ footer {
 
 
 /* Ends Here For now!!! */
+
+
+@media (min-width: 0px) and (max-width: 480px) {
+
+    body {
+        width: 100%;
+    }
+
+    .body-demo {
+        text-align: center;
+    }
+
+    .nav-bar {
+        display: none;
+    }
+
+    .homePage h2 {
+        font-size: 2.5rem;
+    }
+
+    .homePage p {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .home-hero__mouse-scroll-cont {
+        display: none;
+    }
+
+    .about {
+        display: block;
+        padding: 0.5rem;
+    }
+
+    .me {
+        padding: 1rem;
+    }
+
+    .me h2 {
+        font-size: 2rem;
+    }
+
+    .me p {
+        font-size: 1.5rem;
+    }
+
+    .about-Me,
+    .skill {
+        margin: 10px;
+        padding: 0.5rem;
+    }
+
+    .about-Me h2 {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .about-Me p {
+        text-align: center;
+    }
+
+    .my-Skills h2 {
+        font-size: 2rem;
+    }
+
+    .weapon {
+        padding: 0.5rem;
+    }
+
+    .project {
+        padding: 1rem;
+    }
+
+    .proj {
+        display: block;
+        margin: 1rem;
+
+    }
+
+    .abt {
+        padding: 0.5rem;
+    }
+
+    .abt h2 {
+        font-size: 2rem;
+    }
+
+    .abt p {
+        font-size: 1.5rem;
+    }
+
+    .contact {
+        box-sizing: border-box;
+        padding: 0.5rem;
+        width: 100%;
+    }
+
+    .contact_form {
+        width: 95%;
+    }
+
+    .form {
+        width: 90%;
+        margin: 0.5rem;
+    }
+
+    .form>input {
+        width: 90%;
+        padding: 1rem;
+    }
+
+    .form>textarea {
+        width: 90%;
+        padding: 2rem;
+
+    }
+
+
+
+}
+
+/* TODO: code time extension  */
+/* 
+    CSS breakpoints 
+
+    0px - 480px - Smaller Smartphones
+    
+    481px - 768px - Tablets and Larger Smartphones
+    
+    769px - 1279px - Laptops, Larger Tablets in Landscape, and Small Desktops
+    
+    1280px+ - Larger desktops and Monitors.
+
+*/
