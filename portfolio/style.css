@@ -16,16 +16,17 @@ html {
 }
 
 body {
-    background-color: #333;
+    background-image: linear-gradient(290deg, #4a4a4a, #dbd7d7fa);
     position: relative;
     box-sizing: border-box;
+    font-family: 'Chubbo', sans-serif;
     max-width: 120rem;
     margin: auto;
 }
 
-.body-demo {
+/* .body-demo {
     background-image: url(images/henry-co.jpg);
-}
+} */
 
 
 /* Nav Bar Styling */
@@ -33,7 +34,7 @@ body {
 .nav-bar {
     /* position: absolute; */
     display: flex;
-    /* width: 100vw; */
+    padding: 0 1.5rem;
     height: 5rem;
     position: sticky;
     top: 0;
@@ -52,7 +53,7 @@ body {
 .profile img {
     width: 50px;
     height: 50px;
-    margin: 10px;
+    margin: 0.5rem;
     border: 1px solid #fdfbfb;
     border-radius: 50%;
     align-self: center;
@@ -61,7 +62,7 @@ body {
 
 .profile p {
     align-self: center;
-    margin: 10px 40px;
+    margin: 0.5rem 3.5rem 0.5rem 0;
     text-transform: uppercase;
     font-weight: 900;
 }
@@ -69,7 +70,7 @@ body {
 .link {
     flex-basis: 40%;
     display: flex;
-    margin: 10px 40px;
+    margin: 1rem 0.2rem;
     padding: 10px;
 }
 
@@ -82,6 +83,7 @@ body {
     font-size: 18px;
     font-weight: 700;
     text-transform: uppercase;
+    text-align: end;
 
 }
 
@@ -119,6 +121,7 @@ body {
     font-size: 3.5rem;
     text-transform: uppercase;
     text-align: center;
+    font-weight: 900;
 }
 
 .homePage p {
@@ -144,7 +147,7 @@ body {
 
 .proj-btn:hover {
     box-shadow: 2px 1px 5px #444;
-    transition: box-shadow 0.15s;
+    transition: box-shadow 0.02s;
 }
 
 .proj-btn a {
@@ -284,7 +287,7 @@ About Me */
 
 .btn:hover {
     border: 1px solid #c6c6c6;
-    box-shadow: 0px 5px 7px 5px #000;
+    box-shadow: 0px 5px 7px 5px #222121d2;
     /* margin: 18px 5px; */
     padding: 12px 7px;
     transition: padding 0.1s;
@@ -317,6 +320,7 @@ About Me */
 .weapon {
     font-size: 1.6rem;
     padding: 1rem;
+    cursor: none;
 
 }
 
@@ -338,7 +342,6 @@ About Me */
     color: #eee;
     background-color: #555;
     transition: all 0.2s;
-    cursor: no-drop;
     border: 2px solid #555;
     user-select: none;
 }
@@ -364,6 +367,7 @@ About Me */
 
 .proj {
     /* border: 3px solid #ff0000; */
+    background-image: url(images/henry-co.jpg);
     box-sizing: border-box;
     display: grid;
     /* grid-gap: 5rem; */
@@ -371,20 +375,26 @@ About Me */
     grid-template-columns: 1.3fr 1.5fr;
     box-sizing: border-box;
     position: relative;
-    /* border: 0.2rem solid #00ffff; */
+    border: 0.1 rem solid #272727;
     overflow: hidden;
     margin: 1rem 0.3rem 10rem 0.3rem;
     padding: 1rem;
     justify-items: center;
     align-items: center;
+    border-radius: 1rem;
+    box-shadow: 1rem 1rem 1rem 0rem #272727;
 }
 
-img {
+.proj:hover {}
+
+.img {
     width: 100%;
     border-radius: 1rem;
     position: relative;
     z-index: 1;
     opacity: 0.8;
+    border: 1px solid #353535;
+    box-shadow: 0.2rem 0rem 1rem 0rem #353535;
     /* width: 30px; */
 }
 
@@ -411,7 +421,26 @@ img {
 .proj-button {
     background-color: #0000ff;
     margin: auto;
+    text-align: center;
+    box-sizing: border-box;
+    height: 3rem;
+    border: 1px solid #0000ff;
+    border-radius: 10px;
+    font-size: 1rem;
 
+}
+
+.proj-button:hover {
+    box-shadow: 2px 1px 5px #444;
+    transition: box-shadow 0.02s;
+}
+
+.proj-button a {
+    padding: 1rem 2rem;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 800;
 }
 
 /* Project Page Styling Ends Here!!! */
@@ -594,20 +623,24 @@ footer {
 
 
 .main-footer-row1 {
-    flex-basis: 30%;
+    flex-basis: 20%;
     line-height: 1.5;
     padding: 10px;
-    /* flex-basis: 30px; */
-    /* border: 2px solid #0000ff; */
-    /* width: 30%; */
     order: 2;
-    /* display: flex; */
-    /* flex-direction: column; */
+}
+
+
+.main-footer-row1 h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    /* border: 2px solid; */
 }
 
 .social-icon {
     /* width: 10rem; */
-    display: flex;
+    display: grid;
+    grid-template-columns: 40px 40px 40px 40px 40px;
+    /* justify-content: space-evenly; */
 }
 
 ion-icon {
@@ -656,41 +689,61 @@ ion-icon {
 /* Ends Here For now!!! */
 
 
-@media (min-width: 0px) and (max-width: 480px) {
+@media (max-width: 768px) {
 
     body {
         width: 100vw;
     }
 
-
     .nav-bar {
-        display: none;
+        /* position: absolute; */
+        display: flex;
+        /* width: 100vw; */
+        height: 3rem;
+        position: sticky;
+        top: 0;
+        background-color: #f7f4f4;
+        border-bottom: 2px solid inherit;
+        z-index: 10;
+        box-shadow: 2px 1px 10px #9c9c9c;
     }
 
     .homePage {
-        padding: 0.5rem;
-        margin: 0;
-    }
-
-    .homePage h2 {
-        margin: 10rem 0.1rem 3rem 0.1rem;
-        font-size: 2.5rem;
-    }
-
-    .homePage p {
-        font-size: 1.9rem;
-        text-align: center;
-        padding: inherit;
-        margin: 3rem 0.1rem;
-    }
-
-    .proj-btn {
-        margin-top: 1rem;
-        margin-bottom: 4rem;
+        margin: 7rem 2rem 7rem 2rem;
     }
 
     .home-hero__mouse-scroll-cont {
         display: none;
+    }
+
+
+    .profile {
+        flex-basis: 60%;
+        display: flex;
+    }
+
+    .profile img {
+        width: 2rem;
+        height: 2rem;
+        margin: 1rem;
+    }
+
+    .profile p {
+        margin: 0;
+        font-size: 0.7rem;
+    }
+
+    .link {
+        flex-basis: 40%;
+        display: flex;
+        margin: 0.5rem 1rem;
+        padding: 0.5rem;
+    }
+
+    .link a {
+        padding: 0.5rem;
+        flex-basis: 50%;
+        font-size: 0.6rem;
     }
 
     .about {
@@ -720,6 +773,10 @@ ion-icon {
         padding: 0.5rem;
     }
 
+    .skill {
+        margin-bottom: 5rem;
+    }
+
     .about-Me h2 {
         font-size: 2rem;
         text-transform: capitalize;
@@ -743,20 +800,10 @@ ion-icon {
         width: 100%;
     }
 
-    .project {
-        padding: 0.5rem;
-    }
-
-    .items .project {
+    .items {
         padding: 1rem;
     }
 
-    .proj {
-        display: block;
-        margin: 0.5rem;
-        padding: 00.5rem;
-
-    }
 
     .abt {
         padding: 0.5rem;
@@ -805,29 +852,85 @@ ion-icon {
         padding: 0;
     }
 
+    .social-icon {
+        grid-template-columns: 40px 40px 40px 40px 40px;
+        justify-content: center;
+    }
+
     .main-footer-row2 {
         width: 98%;
+        text-align: center;
     }
 
     .main-footer-row2 h2 {
-        font-size: 2rem;
+        font-size: 1.2rem;
+    }
+
+    .main-footer-row2 p {
+        font-size: 0.8rem;
     }
 
     .main-footer-lower {
         padding: 1rem;
+        font-size: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-bar {
+        display: none;
+    }
+
+    .homePage {
+        padding: 0.5rem;
+        margin: 0;
+    }
+
+    .homePage h2 {
+        margin: 10rem 0.1rem 3rem 0.1rem;
+        font-size: 2.5rem;
+    }
+
+    .homePage p {
+        font-size: 1.9rem;
+        text-align: center;
+        padding: inherit;
+        margin: 3rem 0.1rem;
     }
 
 
 
 }
 
+@media (max-width: 1111px) {
+    .project {
+        padding: 0.5rem;
+    }
+
+    .proj {
+        display: block;
+        margin: 0.5rem;
+        padding: 00.5rem;
+        margin-bottom: 5rem;
+    }
+
+    .proj-btn {
+        margin-top: 1rem;
+        margin-bottom: 4rem;
+    }
+
+}
+
 /* TODO: code time extension  */
 /* 
     CSS breakpoints 
-
+    
     0px - 480px - Smaller Smartphones
     
-    481px - 768px - Tablets and Larger Smartphones
+    481px - 768px - Tablets and Larger Smartphones @ this media screen ={
+        'footer': 'same as 480px media screen'
+        'nav-bar': 'fixed; sizes are reduced'
+    }
     
     769px - 1279px - Laptops, Larger Tablets in Landscape, and Small Desktops
     
