@@ -15,35 +15,43 @@
 <body>
     <div class="body-demo">
 
-        <nav class="nav-bar">
-            <div class="profile">
-                <img src="images/favi_navPics.jpg" alt="Cars">
-
-                <!-- TODO: change the image above either to initials or my pics. -->
-
-                <p>CHIZZI</p>
+        <nav class="navbar">
+            <div class="navbar-container container">
+                <input type="checkbox" name="" id="">
+                <div class="hamburger-lines">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </div>
+                <ul class="menu-items">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#project">Project</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="logo">
+                    <img src="images/favi_navPics.jpg" alt="">
+                    <p>
+                        Obinna Chidi
+                    </p>
+                </div>
             </div>
-            <div class="link">
-                <a href="index.html">Home</a>
-                <a href="#aboutMe">About</a>
-                <a href="#myProject">Project</a>
-                <a href="#contactMe">Contact</a>
-            </div>
-
-
         </nav>
 
 
-        <section class="home">
+        <section class="home" id="home">
             <div class="homePage">
                 <h2>
-                    Hey, I'm Obinna Chidi (Chizzi)
+                    Hey, I'm
+                    <span class="txt-rotate" data-period="500" data-rotate='[ "Obinna Chidi", "Chizzi"]'></span>
+
+
                 </h2>
                 <p>
                     A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leas to
                     the success of the overall product.
                 </p>
-                <button class="proj-btn">
+                <button class="btn btn-primary">
                     <a href="#">PROJECTS</a>
                 </button>
                 <div class="home-hero__mouse-scroll-cont">
@@ -51,7 +59,7 @@
                 </div>
             </div>
         </section>
-        <section class="about" id="aboutMe">
+        <section class="about" id="about">
             <div class="me">
                 <h2>
                     About me!
@@ -96,14 +104,14 @@
                         </span> me.
                     </p>
 
-                    <button class="btn">
+                    <button class="btn btn-primary">
                         <a href="../Contact_me/index.html">Contact</a>
                     </button>
 
                 </div>
 
             </div>
-            <div class="skill">
+            <div class="skill" id="skills">
                 <div class="my-Skills">
                     <h2>
                         My Skills
@@ -149,7 +157,7 @@
                 </div>
             </div>
         </section>
-        <section class="project" id="myProject">
+        <section class="project" id="project">
             <div class="me">
                 <h2>
                     projects!
@@ -167,7 +175,7 @@
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit cum eos sed atque ab iure,
                             temporibus et impedit harum ipsum?
                         </p>
-                        <button class="proj-button">
+                        <button class="btn btn-primary">
                             <a href="#">View Project</a>
                         </button>
                     </div>
@@ -183,7 +191,7 @@
                             nesciunt
                             omnis sunt reprehenderit architecto impedit eveniet ab?
                         </p>
-                        <button class="proj-button">
+                        <button class="btn btn-primary">
                             <a href="#">View Project</a>
                         </button>
                     </div>
@@ -199,35 +207,34 @@
                             minus
                             quis, sequi magnam. Praesentium, non aliquid.
                         </p>
-                        <button class="proj-button">
+                        <button class="btn btn-primary">
                             <a href="#">View Project</a>
                         </button>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="contact" id="contactMe">
-            <div class="contact_me">
-                <h2>
-                    Contact
-                </h2>
+        <section id="contact">
+            <div class="contact-me">
+                <h2>Contact Us</h2>
                 <p>
                     Get in touch or shoot me an email directly on <a
                         href="mailto:chidiobinna0001@gmail.com">chidiobinna0001@gmail.com</a>
                 </p>
             </div>
-            <div class="contact_form">
-                <form action="../Portfolio/Index.html" method="post" class="form">
+            <div class="contact-container container">
+                <div class="contact-img">
+                    <img src="images/favi_navPics.jpg" alt="me" />
+                </div>
+
+                <div class="form-container">
+
                     <input type="text" name="name" id="name" placeholder="Name" required>
                     <input type="email" name="email" id="email" placeholder="Email" required>
                     <textarea name="message" id="message" cols="30" rows="7" placeholder="Message" required></textarea>
-                    <button type="submit" class="submit">
-                        Send Message
-                    </button>
-
-                </form>
+                    <a href="#" class="btn btn-primary submit-btn">Submit</a>
+                </div>
             </div>
-
         </section>
         <footer class="footer">
             <div class="main-container">
@@ -237,8 +244,6 @@
                             SOCIAL
                         </h2>
                         <div class="social-icon">
-
-                            <!-- FIXME: checkout icons from ionicons instead. its more cleaner and cooler. -->
 
                             <a href="#">
                                 <ion-icon name="logo-twitter"></ion-icon>
@@ -260,15 +265,19 @@
                         </div>
                     </div>
                     <div class="main-footer-row main-footer-row2">
-                        <h2>Lorem, ipsum dolor.</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, exercitationem.</p>
+                        <h2>Obinna Chidi</h2>
+                        <p>
+                            A Frontend focused Web Developer building the Frontend of Websites and Web Applications that
+                            leads to the success of the overall product.
+                        </p>
                     </div>
                 </div>
                 <div class="main-footer-lower">
                     © Copyright <script>
                         document.write(new Date().getFullYear())
-                    </script>. Made by
-                    <a rel="noreferrer" target="_blank" href="#">Obinna Chidi</a>
+                    </script>. Made by <span class="fullName">
+                        <a rel="noreferrer" target="_blank" href="#">Obinna Chidi</a>
+                    </span>
                 </div>
             </div>
         </footer>
@@ -276,6 +285,68 @@
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        // Typewritter
+        var TxtRotate = function (el, toRotate, period) {
+            this.toRotate = toRotate;
+            this.el = el;
+            this.loopNum = 0;
+            this.period = parseInt(period, 10) || 2000;
+            this.txt = '';
+            this.tick();
+            this.isDeleting = false;
+        };
+
+        TxtRotate.prototype.tick = function () {
+            var i = this.loopNum % this.toRotate.length;
+            var fullTxt = this.toRotate[i];
+
+            if (this.isDeleting) {
+                this.txt = fullTxt.substring(0, this.txt.length - 1);
+            } else {
+                this.txt = fullTxt.substring(0, this.txt.length + 1);
+            }
+
+            this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+
+            var that = this;
+            var delta = 300 - Math.random() * 100;
+
+            if (this.isDeleting) {
+                delta /= 2;
+            }
+
+            if (!this.isDeleting && this.txt === fullTxt) {
+                delta = this.period;
+                this.isDeleting = true;
+            } else if (this.isDeleting && this.txt === '') {
+                this.isDeleting = false;
+                this.loopNum++;
+                delta = 500;
+            }
+
+            setTimeout(function () {
+                that.tick();
+            }, delta);
+        };
+
+        window.onload = function () {
+            var elements = document.getElementsByClassName('txt-rotate');
+            for (var i = 0; i < elements.length; i++) {
+                var toRotate = elements[i].getAttribute('data-rotate');
+                var period = elements[i].getAttribute('data-period');
+                if (toRotate) {
+                    new TxtRotate(elements[i], JSON.parse(toRotate), period);
+                }
+            }
+            // INJECT CSS
+            var css = document.createElement("style");
+            css.type = "text/css";
+            css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #5cb85c }";
+            document.body.appendChild(css);
+        };
+    </script>
 </body>
 
 </html>
